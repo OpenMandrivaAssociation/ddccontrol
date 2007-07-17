@@ -1,7 +1,7 @@
 %define name ddccontrol
-%define version 0.4.1
-%define release %mkrel 2
-%define dbversion 20060308
+%define version 0.4.2
+%define release %mkrel 1
+%define dbversion 20061014
 %define ddcdb	%{name}-db-%{dbversion}
 
 %define major 0
@@ -82,11 +82,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/gddccontrol
 %{_datadir}/locale/*/*/*
 %{_datadir}/ddccontrol-db/*
-%{_datadir}/%name
+#%{_datadir}/%name
 %{_datadir}/pixmaps/*
 %{_datadir}/applications/*
-%{_libdir}/bonobo/servers/*
-%{_libdir}/%name
+#%{_libdir}/bonobo/servers/*
+#%{_libdir}/%name
+%{_mandir}/man1/*.lzma
 
 %files -n %libname
 %defattr(-,root,root)
