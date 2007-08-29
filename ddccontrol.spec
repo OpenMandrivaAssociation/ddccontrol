@@ -87,7 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/*
 #%{_libdir}/bonobo/servers/*
 #%{_libdir}/%name
-%{_mandir}/man1/*.lzma
+%{_mandir}/man1/*
 
 %files -n %libname
 %defattr(-,root,root)
