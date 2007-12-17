@@ -18,7 +18,6 @@ Source1: %{ddcdb}.tar.bz2
 License: GPL 
 Group: System/Kernel and hardware 
 Url: http://ddccontrol.sourceforge.net/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: pciutils-devel
 BuildRequires: libxml2-devel
 BuildRequires: perl(XML::Parser)
