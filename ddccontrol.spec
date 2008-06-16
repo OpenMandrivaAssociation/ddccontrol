@@ -1,6 +1,6 @@
 %define name ddccontrol
 %define version 0.4.2
-%define release %mkrel 1
+%define release %mkrel 2
 %define dbversion 20061014
 %define ddcdb	%{name}-db-%{dbversion}
 
