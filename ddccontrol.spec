@@ -22,7 +22,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: pciutils-devel
 BuildRequires: libxml2-devel
 BuildRequires: perl(XML::Parser)
-BuildRequires: gtk+-devel
+BuildRequires: gtk+2-devel
 
 %description
 DDCcontrol is a program running on Linux, used to control monitor parameters,
