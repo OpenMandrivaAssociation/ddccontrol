@@ -15,6 +15,7 @@ Version: %{version}
 Release: %{release}
 Source0: %{name}-%{version}.tar.bz2
 Source1: %{ddcdb}.tar.bz2
+Patch0: ddccontrol-0.4.2-fix-str-fmt.patch
 License: GPL 
 Group: System/Kernel and hardware 
 Url: http://ddccontrol.sourceforge.net/
@@ -53,19 +54,20 @@ libddccontrol devel files
 
 %prep
 %setup -q -a 1
+%patch0 -p0
 
 %build
-%configure
+%configure2_5x
 %make
 cd %{ddcdb}
-%configure --prefix=%{_prefix}/%{name}
+%configure2_5x --prefix=%{_prefix}/%{name}
 %make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
 cd %{ddcdb}
-make install DESTDIR=$RPM_BUILD_ROOT
+%makeinstall_std
 chmod 755 $RPM_BUILD_ROOT/%{_bindir}/ddcpci
 
 %if %mdkversion < 200900
