@@ -6,8 +6,7 @@
 
 %define major 0
 %define libname %mklibname %{name} %major
-%define libnamedev %mklibname %{name} %major -d
-%define __libtoolize true
+%define libnamedev %mklibname %{name} -d
 
 Summary: Ddccontrol control the monitor parameters
 Name: %{name}
@@ -45,8 +44,9 @@ and the buttons in front of the monitor.
 Summary: Libddccontrol library headers and development libraries
 Group: Development/Other
 Requires: %{libname} = %{version}
-Provides: lib%{name}-devel = %{version}
-Provides: libddccontrol-devel
+Provides: lib%{name}-devel = %{version}-%{release}
+Provides: %{name}-devel = %{version}-%{release}
+Obsoletes: %{_lib}ddccontrol0-devel < %{version}-%{release}
 
 %description -n %{libnamedev}
 libddccontrol devel files
