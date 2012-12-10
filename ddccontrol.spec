@@ -105,3 +105,54 @@ rm -rf $RPM_BUILD_ROOT
 %_libdir/*.*a
 %{_includedir}/%name
 
+
+
+%changelog
+* Sun Aug 22 2010 Funda Wang <fwang@mandriva.org> 0.4.2-3mdv2011.0
++ Revision: 571894
+- new devel package policy
+- fix str fmt
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+
+* Tue Jun 17 2008 Thierry Vignaud <tv@mandriva.org> 0.4.2-2mdv2009.0
++ Revision: 222088
+- we need gtk+2-devel instead of gtk+1-devel in order to build...
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+- do not hardcode lzma extension!!!
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + J√©r√¥me Soyer <saispo@mandriva.org>
+    - Bump Release
+
+
+* Wed Aug 02 2006 Frederic Crozat <fcrozat@mandriva.com> 0.4.1-2mdv2007.0
+- Rebuild with latest dbus
+
+* Fri Jun 09 2006 Erwan Velu <erwan@seanodes.com> 0.4.1
+- 0.4.1
+
+* Wed Apr 26 2006 Nicolas LÈcureuil <neoclust@mandriva.org> 0.3-3mdk
+- Fix BuildRequires
+
+* Tue Apr 25 2006 Nicolas LÈcureuil <neoclust@mandriva.org> 0.3-2mdk
+- Fix BuildRequires
+- use mkrel
+
+* Wed Nov 16 2005 Lenny Cartier <lenny@mandriva.com> 0.3-1mdk
+- 0.3
+- newest ddb 20051114
+
+* Fri Jul 22 2005 Erwan Velu <erwan@seanodes.com> 0.1.3-1mdk
+- 0.1.3 & newest ddb (20050715)
+
+* Thu Jun 09 2005 Erwan Velu <erwan@seanodes.com> 0.1.2-1mdk
+- Inital release
+
