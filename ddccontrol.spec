@@ -8,7 +8,7 @@
 %define libname %mklibname %{name} %major
 %define libnamedev %mklibname %{name} -d
 
-Summary: Ddccontrol control the monitor parameters
+Summary: Control the monitor parameters
 Name: %{name}
 Version: %{version}
 Release: %{release}
