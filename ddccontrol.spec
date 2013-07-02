@@ -21,7 +21,7 @@ Url: http://ddccontrol.sourceforge.net/
 BuildRequires: pciutils-devel
 BuildRequires: libxml2-devel
 BuildRequires: perl(XML::Parser)
-BuildRequires: gtk+2-devel
+BuildRequires: pkgconfig(gtk+-2.0)
 
 %description
 DDCcontrol is a program running on Linux, used to control monitor parameters,
