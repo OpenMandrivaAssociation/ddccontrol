@@ -1,6 +1,6 @@
 %define name ddccontrol
 %define version 0.4.2
-%define release %mkrel 3
+%define release  4
 %define dbversion 20061014
 %define ddcdb	%{name}-db-%{dbversion}
 
@@ -18,7 +18,6 @@ Patch0: ddccontrol-0.4.2-fix-str-fmt.patch
 License: GPL 
 Group: System/Kernel and hardware 
 Url: http://ddccontrol.sourceforge.net/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: pciutils-devel
 BuildRequires: libxml2-devel
 BuildRequires: perl(XML::Parser)
@@ -64,11 +63,10 @@ cd %{ddcdb}
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 cd %{ddcdb}
 %makeinstall_std
-chmod 755 $RPM_BUILD_ROOT/%{_bindir}/ddcpci
+chmod 755 %{buildroot}/%{_bindir}/ddcpci
 
 %if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
@@ -79,10 +77,8 @@ chmod 755 $RPM_BUILD_ROOT/%{_bindir}/ddcpci
 %endif
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
 %{_bindir}/ddccontrol
 %{_bindir}/ddcpci
 %{_bindir}/gddccontrol
@@ -96,11 +92,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 
 %files -n %libname
-%defattr(-,root,root)
 %_libdir/*.so.*
 
 %files -n %libnamedev
-%defattr(-,root,root)
 %_libdir/*.so
 %_libdir/*.*a
 %{_includedir}/%name
