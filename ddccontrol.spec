@@ -1,6 +1,6 @@
 %define name ddccontrol
 %define version 0.4.2
-%define release  5
+%define release  6
 %define dbversion 20061014
 %define ddcdb	%{name}-db-%{dbversion}
 
@@ -123,7 +123,7 @@ chmod 755 %{buildroot}/%{_bindir}/ddcpci
   + Olivier Blin <oblin@mandriva.com>
     - restore BuildRoot
 
-  + Jérôme Soyer <saispo@mandriva.org>
+  + JÃ©rÃ´me Soyer <saispo@mandriva.org>
     - Bump Release
 
 
@@ -133,10 +133,10 @@ chmod 755 %{buildroot}/%{_bindir}/ddcpci
 * Fri Jun 09 2006 Erwan Velu <erwan@seanodes.com> 0.4.1
 - 0.4.1
 
-* Wed Apr 26 2006 Nicolas L�cureuil <neoclust@mandriva.org> 0.3-3mdk
+* Wed Apr 26 2006 Nicolas Lécureuil <neoclust@mandriva.org> 0.3-3mdk
 - Fix BuildRequires
 
-* Tue Apr 25 2006 Nicolas L�cureuil <neoclust@mandriva.org> 0.3-2mdk
+* Tue Apr 25 2006 Nicolas Lécureuil <neoclust@mandriva.org> 0.3-2mdk
 - Fix BuildRequires
 - use mkrel
 
