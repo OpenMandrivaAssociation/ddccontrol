@@ -1,3 +1,4 @@
+%define _disable_rebuild_configure 1
 %define dbversion 20061014
 %define ddcdb %{name}-db-%{dbversion}
 
