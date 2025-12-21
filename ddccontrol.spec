@@ -16,6 +16,11 @@ Patch0: ddccontrol-0.4.2-fix-str-fmt.patch
 License: GPL 
 Group: System/Kernel and hardware 
 Url: https://ddccontrol.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pciutils-devel
 BuildRequires: libxml2-devel
 BuildRequires: perl(XML::Parser)
